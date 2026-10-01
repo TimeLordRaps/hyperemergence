@@ -1,0 +1,33 @@
+{
+  "field_id": "hyperemergence",
+  "contract_version": "0.1.0",
+  "classification": "FRAME",
+  "module": "hyperemergence",
+  "exports": [
+    "Sense",
+    "SENSES",
+    "resolve_sense",
+    "Statement",
+    "FIELDS_ASKED",
+    "FROM_HYPERPHYSICS",
+    "NOVELTIES",
+    "STATEMENTS",
+    "Target",
+    "Stabilization",
+    "Candidate",
+    "Verdict",
+    "Reading",
+    "assess"
+  ],
+  "scope": "Hyperstratum's definition of a hyperemergent, newly emerging cross-level coherence before it stabilizes into a named hyperrelation, graph, or hyperform, held apart from plain emergence; and the finite reading of a declared candidate against it, which can refute a candidate on one level or one declared stabilized, and otherwise reads UNKNOWN.",
+  "exclusions": [
+    "This module does not detect or establish hyperemergence; the definition is Hyperstratum's.",
+    "'emergence' and 'emergent' are not aliased to 'hyperemergence'.",
+    "No candidate is confirmed: the definition states no criterion for coherence or newness, and there is no confirming verdict.",
+    "No closure flag stands in for a demonstration; realities closing themselves is recorded as Tyler's open statement.",
+    "Whether Hyperchemistry is a hyperemergence from Hyperphysics is not decided.",
+    "No clock, index, duration, or step count is used; 'before it stabilizes' is read as a declaration, not a time.",
+    "No physical, chemical, cosmological, or ethical claim is established."
+  ],
+  "verifier_status": "NOT_CHECKED"
+}
