@@ -2,8 +2,9 @@
 
 The definition of a hyperemergent comes from Hyperstratum's text, pinned
 below. Tyler Roost's own statements are quoted with their dates, in Pacific
-time. The executable frame, the two verdicts and the tests are an
-assistant-proposed [FRAME]. They are not his words.
+time. The executable frame, finite theory, coherence mechanisms, two native
+declaration verdicts and tests are assistant-proposed [FRAME] constructions.
+They are not his words or native derivations.
 
 ## Hyperstratum, the definition
 
@@ -105,13 +106,47 @@ confirmed.
 The reading answers one worry and keeps another open. It has been said
 that the definition gives no stabilization criterion, so nothing can fail
 to be a hyperemergent. Read against declarations, a candidate can fail, on
-one level or on a declared stabilization. A candidate still cannot pass:
-no source yet gives a criterion that establishes the coherence (Q3).
+one level or on a declared stabilization. A native candidate still cannot
+pass: no cited criterion establishes native coherence and true newness
+(Q3). The finite coherence checks have explicit, narrower criteria.
 
-A working analysis in Hyperstratum, not yet published, also reads the
-definition as two moments, emerging and stabilized, and leaves its
-candidates UNKNOWN. This frame agrees with that much and cites nothing else
-from it.
+This limited declaration reading remains intact alongside the developed
+finite coherence laboratory; the latter checks actual supplied path records
+and does not promote a native candidate to confirmation.
+
+## Developed finite theory and mechanisms, 2026-10-03
+
+ASSISTANT-PROPOSED [FRAME]. Typed presentations, ordered witness
+reconstruction, composition, three coherence strengths, structure maps,
+finite continuations, fixed-context development comparison, stabilization
+bindings and the structural derivations in [THEORY.md](THEORY.md) are this
+repository's proposed finite constructions. They independently implement
+ordinary finite labelled-path operations; no private sibling implementation
+is copied into the package. Their native correspondence remains OPEN.
+
+The publicly inspected Hypermath revision is
+[`dc89cbb`](https://github.com/TimeLordRaps/hypermath/tree/dc89cbb4f154844ca4909d7c1c359ee3882323e2).
+Its README distinguishes `~~` continuation overlap, `=~` coinciding
+continuation outcomes and `==` mutual path reproduction. Its public
+`docs/research/PATH_LAYERS.md` and `PATH_TRANSPORT.md` distinguish finite
+witness-preserving constructions from native generation and reproduction
+obligations. These distinctions inform this frame; Python node and arc
+identifiers are not thereby Hypermath Forms or native apply-steps.
+
+USER-STATED, 2026-10-03: Tyler distinguished divergence of divergences in
+Hyperchaos from an ordinary butterfly effect changing an orderly
+trajectory's optimum. He identified divergences entering convergent states
+as closer to Hyperorder and convergence toward divergence as Hyperchaos.
+Those distinctions guide the sibling integration boundary. The cross-level
+coherence laboratory does not substitute branching or endpoint agreement
+for those field-specific meanings.
+
+An independently reproduced identifier-renaming counterexample refuted the
+first development comparator's inference from missing old names to newly
+witnessed coherence. The repaired contract requires a fixed typed carrier
+and stable shared arc meanings; unaligned names or meaning drift stay
+`UNKNOWN_CONTEXT`. This is a scope correction grounded in a counterexample,
+not a weakened novelty assertion.
 
 ## What is cited, not restated
 

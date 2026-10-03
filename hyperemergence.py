@@ -1,11 +1,12 @@
-"""Finite Hyperemergence frame: the cited definition read as declarations it can refute.
+"""Hyperemergence: sourced declarations and a witnessed finite coherence laboratory.
 
 This module does not detect hyperemergence. It records Hyperstratum's definition with its
 source, keeps Tyler's statements open, and reads a declared candidate against the two
 conditions the definition makes checkable: the coherence is cross-level, and it has not
 stabilized into a named hyperrelation, graph, or hyperform. The definition gives no
 criterion that establishes coherence or newness, so a candidate can be refuted, never
-confirmed.
+confirmed. The companion coherence module constructs and checks finite paths,
+transport and stabilization handoffs without promoting them to native instances.
 """
 
 from __future__ import annotations
@@ -166,3 +167,16 @@ def assess(candidate: Candidate) -> Reading:
     if reasons:
         return Reading(Verdict.REFUTED, tuple(reasons))
     return Reading(Verdict.UNKNOWN, UNESTABLISHED)
+
+
+from coherence import (Arc, CheckStatus, CoherenceStatus, Criterion, Development,
+                       Handoff, MapReport, MissingEvidence, Node, Obligation, Path,
+                       Presentation, StructureMap, TraceLevel, Transport, Witness,
+                       check, compare_development, compose, continuation_profile,
+                       map_report, presentation_digest, realize, relabel, stabilize,
+                       transport, verify_stabilization)
+
+
+if __name__ == "__main__":
+    from coherence_cli import main
+    raise SystemExit(main())

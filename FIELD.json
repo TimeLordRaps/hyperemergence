@@ -1,33 +1,38 @@
 {
   "field_id": "hyperemergence",
-  "contract_version": "0.1.0",
+  "contract_version": "0.2.0",
   "classification": "FRAME",
   "module": "hyperemergence",
   "exports": [
-    "Sense",
-    "SENSES",
-    "resolve_sense",
-    "Statement",
-    "FIELDS_ASKED",
-    "FROM_HYPERPHYSICS",
-    "NOVELTIES",
-    "STATEMENTS",
-    "Target",
-    "Stabilization",
-    "Candidate",
-    "Verdict",
-    "Reading",
-    "assess"
+    "Sense", "SENSES", "resolve_sense", "Statement", "FIELDS_ASKED",
+    "FROM_HYPERPHYSICS", "NOVELTIES", "STATEMENTS", "Target", "Stabilization",
+    "Candidate", "Verdict", "Reading", "assess", "Node", "Arc", "Presentation",
+    "TraceLevel", "Path", "Witness", "MissingEvidence", "realize", "compose",
+    "Criterion", "Obligation", "CheckStatus", "CoherenceStatus", "check",
+    "StructureMap", "MapReport", "Transport", "map_report", "transport", "relabel",
+    "continuation_profile", "Development", "compare_development", "Handoff",
+    "presentation_digest", "stabilize", "verify_stabilization"
   ],
-  "scope": "Hyperstratum's definition of a hyperemergent, newly emerging cross-level coherence before it stabilizes into a named hyperrelation, graph, or hyperform, held apart from plain emergence; and the finite reading of a declared candidate against it, which can refute a candidate on one level or one declared stabilized, and otherwise reads UNKNOWN.",
+  "scope": "Study witnessed finite coherence across declared recursive levels: route composition, endpoint/observation/path obligations, obstructions, structure-map transport, baseline-relative witness development, bounded continuations and mutation-sensitive named stabilization handoffs. Preserve the sourced pre-stabilization hyperemergent sense and the original declaration checker.",
+  "commands": [
+    "python -B -m hyperemergence demo",
+    "python -B -m hyperemergence check examples/coherent.json",
+    "python -B -m hyperemergence walks examples/coherent.json seed --depth 2",
+    "python -B -u validate.py"
+  ],
+  "sources": [
+    {"repository": "TimeLordRaps/hyperstratum", "revision": "c4ffe2c7ff42c747d74ef5236d3bef631dd5f08e", "role": "sourced hyperemergent definition and hyperstack"},
+    {"repository": "TimeLordRaps/hypermath", "revision": "dc89cbb4f154844ca4909d7c1c359ee3882323e2", "role": "relation/path distinctions and native adequacy boundary"}
+  ],
   "exclusions": [
-    "This module does not detect or establish hyperemergence; the definition is Hyperstratum's.",
-    "'emergence' and 'emergent' are not aliased to 'hyperemergence'.",
-    "No candidate is confirmed: the definition states no criterion for coherence or newness, and there is no confirming verdict.",
-    "No closure flag stands in for a demonstration; realities closing themselves is recorded as Tyler's open statement.",
-    "Whether Hyperchemistry is a hyperemergence from Hyperphysics is not decided.",
-    "No clock, index, duration, or step count is used; 'before it stabilizes' is read as a declaration, not a time.",
-    "No physical, chemical, cosmological, or ethical claim is established."
+    "Finite COHERENT means only that the explicitly listed obligations have reconstructed cross-level witnesses.",
+    "Native hyperemergence, formation, true newness and Hyperform closure remain UNKNOWN or OPEN.",
+    "Trace tags are declarations; they do not prove native Hypermath relations.",
+    "Development reports acquired/lost witnesses only in a fixed typed context; unaligned renaming or changed shared meanings yields UNKNOWN_CONTEXT.",
+    "Finite continuation horizons do not establish unbounded continuation capacity.",
+    "Stabilization digests establish bounded content integrity, not signer authority or native closure.",
+    "No physical, chemical, cosmological, consciousness or ethical claim is established.",
+    "No automatic Hyperorder or Hyperchaos classification is made."
   ],
   "verifier_status": "NOT_CHECKED"
 }

@@ -1,51 +1,95 @@
 # Hyperemergence
 
-**Coherence while it is still emerging.** In
-[Hyperstratum](https://github.com/TimeLordRaps/hyperstratum/blob/c4ffe2c7ff42c747d74ef5236d3bef631dd5f08e/specs/canonical-definitions.md),
-a hyperemergent is "newly emerging cross-level coherence before it stabilizes
-into a named hyperrelation, graph, or hyperform". Hyperstratum's hyperstack
-places it beside hyperconnection and hyperrelation, between the hypernode and
-the graph layer.
+**Study the coherence that becomes possible across recursive levels while it
+is still emerging.** A coherent outcome can retain several incompatible
+explanations. A projection can erase their difference. A named stable
+presentation can preserve a result while losing the route that formed it.
+Hyperemergence investigates those transitions and supplies an executable
+laboratory for inspecting them.
 
-On 2026-09-27 Tyler Roost / The TimeLord asked:
+The sourced starting point is
+[Hyperstratum's definition](https://github.com/TimeLordRaps/hyperstratum/blob/c4ffe2c7ff42c747d74ef5236d3bef631dd5f08e/specs/canonical-definitions.md):
+newly emerging cross-level coherence before stabilization into a named
+hyperrelation, graph, or hyperform. This repository develops an
+assistant-proposed **[FRAME]** of witnessed finite presentations. The native
+formation and adequacy questions remain **[OPEN]**.
 
-> "So Hyperchemistry cannot be defined as a hyperemergence from hyperphysics?
-> Not yet at least?"
+## What you can actually do
 
-This repository is proposed as the family's home for hyperemergence. It cites
-Hyperstratum's definition and does not restate it as its own. Whether the
-definition moves here is Q1 in [FIELD_SPEC.md](FIELD_SPEC.md). Whether one
-field can be a hyperemergence from another is Q2. Neither question is decided
-here. The sense is [HYPER]; the finite reading is a [FRAME].
+- Reconstruct a route from typed nodes and labelled arcs, retaining each
+  intermediate node, semantic role, level and trace tag.
+- Compose routes with checked boundaries and compare shared outcomes with
+  retained level/role/trace observations and full ordered path reproduction.
+- Check cross-level coherence obligations and obtain concrete witnesses,
+  counterexamples or missing-evidence reports.
+- Transport a presentation through a checked structure map and see which
+  intermediate nodes, arcs, roles or trace distinctions were discarded.
+- Compare an incomplete baseline with an extended presentation and identify
+  which specified coherence obligations acquired witnesses in the same
+  typed context. Identifier churn is reported as an unknown comparison.
+- Enumerate continuations through a finite horizon, including cycles, with
+  explicit evidence loss when the path budget is exhausted.
+- Bind a coherent finite presentation to a named stabilization handoff and
+  reject reuse after a source, obligation, role, level or target mutation.
 
-The [finite Python frame](hyperemergence.py) keeps two disciplines:
+These are working mechanisms. Their results are relative to the supplied
+presentation and obligations; `COHERENT` does not mean a native
+hyperemergent has been established.
 
-- **No silent identification.** `hyperemergent` and `hyperemergence` resolve
-  to the one sourced sense. Plain `emergence` and `emergent` resolve to
-  nothing.
-- **Refuted or unknown, never confirmed.** A candidate is a declaration: a
-  name, the levels it spans, and any stabilization. Read against the
-  definition, a candidate is REFUTED when it spans one level, or when it is
-  declared stabilized into a named hyperrelation, graph or hyperform.
-  Otherwise it is UNKNOWN. The definition gives no criterion that establishes
-  coherence or newness, so the frame has no confirming verdict. A
-  stabilization nobody declared is not evidence that none occurred.
+## Run it
 
-The frame is atemporal: "before it stabilizes" is read as a declaration, not
-a time. Hyperobjects, as instantiations of hyperforms, belong to
-[Hyperobjectivity](https://github.com/TimeLordRaps/hyperobjectivity), and
-consciousness and a proposed novelty target belong to
-[Hypersubjectivity](https://github.com/TimeLordRaps/hypersubjectivity).
-[Hyperorder](https://github.com/TimeLordRaps/hyperorder) and
-[Hyperchaos](https://github.com/TimeLordRaps/hyperchaos) were requested with
-this repository on 2026-09-30; how they relate to hyperemergence is not
-decided here. This repository cites them and does not restate them.
-[FIELD.json](FIELD.json) is a local integration descriptor, not a Verifier
-Standard (VSTD) certificate.
+Python 3.12 or later; the runtime uses only the standard library.
 
-Run the standard-library suite with `python -u validate.py`. The runner
-streams named tests under a 20-second overall deadline. It has no per-test
-process isolation. Open questions are in [FIELD_SPEC.md](FIELD_SPEC.md),
-sources in [PROVENANCE.md](PROVENANCE.md), obligations in
-[TECHNICAL_DEBT.md](TECHNICAL_DEBT.md), and the next step in
-[AGENT_HANDOFF.md](AGENT_HANDOFF.md).
+```console
+python -B -m hyperemergence demo
+python -B -m hyperemergence check examples/coherent.json
+python -B -m hyperemergence check examples/partial.json
+python -B -m hyperemergence walks examples/coherent.json seed --depth 2
+python -B -u validate.py
+```
+
+The demo computes a cross-level diamond. Both routes reach `joined`, so the
+endpoint obligation is satisfied. Their intermediate nodes and arc roles
+differ, so exact path reproduction is obstructed. Together the two
+obligations yield `PARTIAL`. A coarse map merges the two routes into one
+summary route; the output retains both original witnesses and reports the
+loss. Adding the missing branch acquires an endpoint witness relative to an
+explicit baseline. The endpoint-only presentation can be handed to a named
+graph, and removing an arc invalidates that handoff.
+
+`check` exits 0 only for a nonempty, fully coherent obligation set; partial,
+obstructed and undetermined checks exit 1. Invalid input exits 2. `walks`
+exits 1 when its budget truncates the selected horizon. The validation
+runner streams named tests under a 20-second overall deadline, with no
+per-test process isolation.
+
+Install from the checkout to obtain the `hyperemergence` command:
+
+```console
+python -m pip install .
+hyperemergence demo
+```
+
+## Read and develop the field
+
+[THEORY.md](THEORY.md) develops the objects, coherence hierarchy, transport
+laws, worked counterexamples, stabilization boundary and research program.
+[FIELD_SPEC.md](FIELD_SPEC.md) binds those ideas to the actual executable
+contract. [PROVENANCE.md](PROVENANCE.md) separates sourced senses,
+user-stated questions and proposed constructions.
+
+Hypermath distinguishes continuation overlap (`~~`), matching outcomes
+with paths discarded (`=~`), and mutual path reproduction (`==`). The finite
+laboratory keeps those distinctions visible without identifying its Python
+records with native Hypermath Forms. Cross-level coherence also does not
+establish Hyperorder's convergence of divergences or Hyperchaos's convergence
+toward divergence; those fields own their respective mechanisms.
+
+The earlier declaration API remains available: `assess(Candidate(...))`
+returns `REFUTED` or `UNKNOWN`. The richer checker preserves that native
+uncertainty while providing actual finite evidence.
+
+[FIELD.json](FIELD.json) lists the integration surface.
+[TECHNICAL_DEBT.md](TECHNICAL_DEBT.md) records unresolved obligations;
+[AGENT_HANDOFF.md](AGENT_HANDOFF.md) records the next research and review
+gates. No Verifier Standard (VSTD) certificate is asserted.
