@@ -126,8 +126,15 @@ is copied into the package. Their native correspondence remains OPEN.
 
 The publicly inspected Hypermath revision is
 [`dc89cbb`](https://github.com/TimeLordRaps/hypermath/tree/dc89cbb4f154844ca4909d7c1c359ee3882323e2).
-Its README distinguishes `~~` continuation overlap, `=~` coinciding
-continuation outcomes and `==` mutual path reproduction. Its public
+Its README describes the concrete L1 chain: `~~` continuation overlap,
+`=~` coinciding continuation outcomes and `==` mutual path reproduction.
+The separate public
+[`QUADRILATERAL_FILTRATION.md`](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md)
+at blob `da31ed9f5ab60cbec1043236f7324910767198d9` documents the architectural
+`~=` abstraction off-branch and conditional retrace. Public native
+`L2_operations.hm` at the same revision is a different source surface and
+contains no `~=` clause. The architectural note's proposals do not establish
+native adequacy or independent reproduction evidence. Its public
 `docs/research/PATH_LAYERS.md` and `PATH_TRANSPORT.md` distinguish finite
 witness-preserving constructions from native generation and reproduction
 obligations. These distinctions inform this frame; Python node and arc
@@ -147,6 +154,34 @@ witnessed coherence. The repaired contract requires a fixed typed carrier
 and stable shared arc meanings; unaligned names or meaning drift stay
 `UNKNOWN_CONTEXT`. This is a scope correction grounded in a counterexample,
 not a weakened novelty assertion.
+
+## Filtration correction, 2026-10-03
+
+USER-CORRECTED: the earlier field description cited only the triangular
+chain and omitted the abstraction branch. The four spellings must stay
+distinct; `~=` concerns path abstraction off the concrete L1 branch, and
+retrace is conditional.
+
+ASSISTANT-PROPOSED [FRAME]: `Arc.trace` retains all four spellings in the
+finite record envelope. The `~=` annotation is not validated as a native
+relation between DerivationPaths and is never ranked as a fourth L1 grade.
+Finite witness reconstruction, transport and JSON output preserve it
+verbatim, while the mixed/off-branch floor remains unknown. This field's
+endpoint/observation/path observation-strength chain is its own, separate
+from the whole foundation filtration.
+
+The exact coherent-path/CLI round-trip failed before the repair because
+`~=` was rejected. Its regression now requires exact retained annotations,
+unknown off-branch grading and invalidation if `~=` is changed to `=~`.
+Those checks establish record behavior; native abstraction, conditional
+retrace and formation remain OPEN. A supplied semantic conclusion is not
+an independent proof of its retrace.
+
+An independent duplicate-member input then refuted literal-tag retention
+at the parser boundary: `trace` occurred twice and the CLI silently selected
+the later `=~` value over `~=`. The repaired parser refuses that ambiguity
+before any verdict. This preserves source meaning rather than normalizing
+the two relations.
 
 ## What is cited, not restated
 

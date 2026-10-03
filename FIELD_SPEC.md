@@ -1,6 +1,6 @@
 # Hyperemergence field contract
 
-Version 0.2.0, 2026-10-03. The defining source is Hyperstratum's
+Version 0.2.1, 2026-10-03. The defining source is Hyperstratum's
 [pinned canonical text](https://github.com/TimeLordRaps/hyperstratum/blob/c4ffe2c7ff42c747d74ef5236d3bef631dd5f08e/specs/canonical-definitions.md).
 It locates a hyperemergent as newly emerging cross-level coherence before
 stabilization into a named hyperrelation, graph or hyperform.
@@ -16,7 +16,12 @@ or research obligation. Host-level proofs are not native L0/L1/L2/L3 closes.
 `Presentation(name, levels, nodes, arcs)` has distinct named levels, nodes
 and arcs. A `Node` has one declared level. An `Arc` has distinct identifier,
 source and target node identifiers, a semantic role and an explicit
-`TraceLevel` tag. A role is not merely an edge's name. Node levels and arc
+`TraceLevel` tag. The legacy API name is a tag envelope: `~~`, `=~`, `==`
+are retained L1 relation/step declarations, while `~=` is a retained
+off-branch path-abstraction annotation. It is not a fourth L1 grade or an
+alias of `=~`. Attaching that annotation to this finite arc record is an
+assistant-proposed representation choice, not a native relation between
+DerivationPaths. A role is not merely an edge's name. Node levels and arc
 endpoints must be declared. Duplicate identifiers, malformed types and
 dangling endpoints are refused. A presentation permits partial evidence:
 omission of a named arc does not assert that no such arc exists in reality.
@@ -51,6 +56,10 @@ Every satisfied obligation additionally requires actual cross-level
 participation: at least two node levels occur in its reconstructed routes.
 Two unused level declarations do not discharge that requirement.
 
+The endpoint/observation/full-path hierarchy is Hyperemergence's own
+observation-strength chain. It is not a complete foundation filtration and
+does not rank the four native relation spellings.
+
 `check` reconstructs evidence and returns an item for every obligation:
 `SATISFIED`, `OBSTRUCTED`, or `UNKNOWN`. An obstruction includes its reason
 and any successfully reconstructed witness. Missing referenced material is
@@ -80,6 +89,23 @@ changes, level changes and weakened trace floors. `injective` is the
 specific one-for-one criterion: distinct source nodes remain distinct and
 each distinct source arc has a distinct one-arc image. It does not decide
 decodability for expanded encodings.
+
+`Witness.trace_floor` takes a minimum only among the three declared L1
+tags. Its status is `L1_DECLARED_FLOOR`; an empty path has status `EMPTY`.
+Any path containing `~=` has floor `None` and status `OFF_BRANCH_UNKNOWN`,
+including a wholly abstraction-annotated path. It retains the full ordered
+tag word rather than replacing it with a numeric or inferred midpoint.
+JSON evidence contains both the word and the floor status.
+
+CLI case loading rejects duplicate JSON members at every object depth. A
+duplicated `trace` member cannot silently overwrite `~=` with `=~` or
+another tag. Ambiguous input exits 2 before a coherence verdict is produced.
+
+`MapReport.trace_incomparabilities` names every source arc whose tag or
+image includes `~=`. It supplies no ordered weakening/promotion judgment
+for that off-branch comparison. Literal tag changes still appear as
+`path_information_lost`; retaining `~=` exactly can pass a finite path
+round-trip without proving native abstraction or retrace.
 
 `transport` returns the original full witness and its image; the original
 is preserved for inspection. `path_information_lost` records failure to
@@ -141,7 +167,7 @@ enumeration uses deterministic arc-name ordering.
 `complete_within_horizon` is true only when enumeration finishes within the
 budget. A stop returns false with `path budget reached`; it does not claim
 that unseen continuations are absent. No finite horizon confirms unbounded
-continuation capacity or native `~~`, `=~`, or `==`.
+continuation capacity or native `~~`, `=~`, `~=`, or `==`.
 
 ## Preserved declarations and source senses [HYPER / FRAME / OPEN]
 
@@ -166,6 +192,15 @@ Hyperlogic owns its consequence and model distinctions; Hyperchemistry owns
 its compositional port relations. This frame does not identify any of those
 native mechanisms with its Python graph paths. A satisfiable relation, a
 shared endpoint or a named handoff alone establishes none of their closes.
+
+The pinned public Hypermath `L2_operations.hm` has the concrete path
+contract and contains no `~=` clause. The separately pinned public
+`QUADRILATERAL_FILTRATION.md` documents the architectural abstraction branch
+and conditional retrace. This field's path-abstraction annotation follows
+that branch distinction and Tyler's correction; it does not attribute a
+later path-specific schema to the older native file. A supplied semantic
+conclusion, witness-validity flag or shared endpoint is not an independent
+proof of the branch's retrace condition. Native adequacy stays `OPEN`.
 
 Hyperobjectivity owns hyperobject instantiation; Hypersubjectivity owns the
 proposed consciousness/novelty account. Hyperorder's convergence of

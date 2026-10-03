@@ -34,8 +34,10 @@ Let a presentation be `P = (L, V, E, ell, s, t, role, trace)`:
 - `E` is a finite set of arc identifiers; `s,t: E -> V` assign each arc its
   source and target.
 - `role` assigns each arc a declared semantic role.
-- `trace` assigns each arc one of `~~`, `=~`, `==`. These are recorded tags,
-  not evidence that native Hypermath relations hold.
+- `trace` retains one of four spellings: `~~`, `=~`, `~=`, `==`. They are
+  caller tags, not native relation proofs. The first, second and fourth
+  belong to the declared L1 concrete trace chain. `~=` is a separate
+  path-abstraction annotation off that chain, not a linear L1 midpoint.
 
 A route is a start node `v0` and an ordered word `e1...en` of arcs, such that
 `s(e1)=v0` and `t(ei)=s(e(i+1))`. Its witness retains the complete vertex
@@ -79,13 +81,15 @@ resource bound also matters: both sides must remain inside the allowed
 path-length domain. This is a finite labelled-path construction, not a
 discharge of native Hypermath's opaque composition or ordinal obligations.
 
-**3. Coherence strength has a strict filtration.** Full witness equality
+**3. Hyperemergence's observation strength has its own chain.** Full witness equality
 implies observation coherence, which implies endpoint coherence, because
 each weaker observation is obtained by discarding distinctions from the
 stronger record. The reverses fail. Two routes can share endpoints but have
 different roles. Two routes can share the whole level/role/trace word but
 traverse different intermediate nodes and arc identifiers. Both
-counterexamples are executable tests.
+counterexamples are executable tests. This chain ranks these finite
+observations; it is not Hypermath's whole foundation filtration and does not
+order abstraction against the concrete L1 tags.
 
 **4. Checked transport preserves endpoint composition.** A structure map
 `F` maps each source node to a target node and each source arc to a target
@@ -184,8 +188,15 @@ target; it does not reconstruct its native formation history.
 
 The publicly inspected
 [Hypermath revision](https://github.com/TimeLordRaps/hypermath/tree/dc89cbb4f154844ca4909d7c1c359ee3882323e2)
-distinguishes continuation overlap (`~~`), coinciding outcomes (`=~`) and
-mutual path reproduction (`==`). Its
+distinguishes the concrete L1 continuation relations `~~`, `=~` and `==`.
+Its separate
+[quadrilateral architectural note](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md)
+documents `~=` abstraction off-branch and a conditional retrace toward
+semantic simulation. That note is architectural source text, not evidence
+that every proposed retrace or external proof bridge is established. The
+native `L2_operations.hm` at this exact pin does not contain a `~=` clause;
+its concrete path contract and the separate architectural note are
+distinct public surfaces. Its
 [witnessed path layers](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/PATH_LAYERS.md)
 and
 [transport construction](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/PATH_TRANSPORT.md)
@@ -193,6 +204,21 @@ keep native generation and reproduction obligations open. This frame
 respects the same distinction; assigning an arc the literal tag `==`
 does not discharge it. L0 ground, L1 relations, L2 operations and L3
 ordinatics remain source-owned layers, not labels for Python class depth.
+
+The laboratory's legacy `Arc.trace` envelope retains `~=` as a caller's
+path-abstraction annotation. This is a finite representation choice; it
+does not cast a native relation between derivation paths into an L1 step
+grade. Any annotated or mixed path reports an unknown off-branch L1 floor
+and preserves the ordered tag record. A checked bijective map can transport
+that record out and back exactly, as `examples/abstraction-path.json` and
+its tests show. This proves finite record recovery, not native abstraction
+closure, transitivity or simulation.
+
+Conditional retrace needs an actual adequacy/reproduction mechanism. A
+record already containing the desired semantic conclusion does not
+independently prove that conclusion. Neither agreement of endpoints nor a
+validity flag authenticates missing formation paths. The finite checker
+provides no automatic `~=` to `==` promotion.
 
 ## Research program and refutable next constructions [OPEN]
 

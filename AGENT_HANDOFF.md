@@ -4,7 +4,7 @@ Objective: develop the field's theory and useful executable cross-level
 coherence mechanisms. The earlier declaration checker is preserved as one
 limited component; it is no longer the repository's whole contribution.
 
-Version 0.2.0 provides typed presentations, reconstructed path witnesses,
+Version 0.2.1 provides typed presentations, reconstructed path witnesses,
 checked composition, endpoint/observation/full-path obligations, concrete
 obstructions, checked structure-map transport, projection-loss reports,
 baseline-relative witness development with a fixed-context guard, bounded
@@ -27,7 +27,20 @@ returns `UNKNOWN_CONTEXT`. Observation-level coherence then had its own
 absent-capability RED gate before implementation. The full named suite was
 rerun after each production change under the native overall deadline.
 
-The latest local suite contains 53 tests. Local validation is bounded to
+The filtration correction reproduces the missing `~=` annotation on an
+actual coherent-path and CLI round-trip. The tag envelope now retains four
+distinct spellings; path abstraction remains off the L1 grade chain, with
+`OFF_BRANCH_UNKNOWN` floor status. Transport reports incomparable branch
+grades explicitly. Endpoint/observation/path checks are this field's own
+observation-strength chain, not the whole foundation filtration. The
+public architectural quad note and public native L2 source are cited as
+different surfaces; no private native patch is copied or quoted.
+
+The duplicate-trace counterexample originally silently changed `~=` to
+`=~` while reporting coherent evidence. The CLI now refuses duplicate JSON
+members before producing a verdict; the exact input is a regression gate.
+
+The latest local suite contains 62 tests. Local validation is bounded to
 these finite source contracts; native Hypermath formation, actual
 hyperemergence/newness and Hyperstratum Hyperform closure remain open. A
 named target and its digest do not settle those gaps.
@@ -44,7 +57,8 @@ correspondence proved and the native generation obligations still open.
 The observational novelty, multi-view gluing and formation-aware
 stabilization gates follow as specified in [THEORY.md](THEORY.md).
 
-Debt/audit continuity: retain HE-001 through HE-017 and the existing audit
-interval. Checkpoint 6 follows the field's development and final local
-validation. The recorded draw is 6; next rotating audit remains due at
-checkpoint 7. Do not redraw merely to postpone it.
+Debt/audit continuity: retain HE-001 through HE-020. The integration receipt
+performed the original due-7 audit and advanced the field to checkpoint 10,
+with interval 7 and next due 17. This correction's coherent changes/checks
+are checkpoints 11-14. Next rotating audit remains due at 17; the stale
+pre-integration worker schedule is superseded. Do not redraw to postpone it.

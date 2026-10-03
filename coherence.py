@@ -2,13 +2,14 @@
 
 Every result is relative to supplied presentations and listed obligations. Trace
 tags preserve a distinction borrowed from Hypermath, but are not proof of native
-~~, =~, or ==. No result confirms that an instance is a native hyperemergent.
+~~, =~, ~=, or ==. Abstraction (~=) is retained as an off-branch path
+annotation, not an L1 step grade. No result confirms native hyperemergence.
 """
 
 from __future__ import annotations
 
 from collections import Counter, deque
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass, fields, is_dataclass
 from enum import Enum
 import hashlib
 import json
@@ -32,9 +33,12 @@ def _tuple(value: object, kind: type, limit: int, label: str) -> None:
 
 
 class TraceLevel(Enum):
+    """Legacy trace-tag envelope; ABSTRACTION_PATH is not an L1 level."""
+
     OVERLAP = "~~"
     OUTCOME = "=~"
     SIMULATION = "=="
+    ABSTRACTION_PATH = "~="
 
 
 _STRENGTH = {TraceLevel.OVERLAP: 0, TraceLevel.OUTCOME: 1, TraceLevel.SIMULATION: 2}
@@ -117,7 +121,17 @@ class Witness:
 
     @property
     def trace_floor(self) -> TraceLevel | None:
-        return min(self.traces, key=_STRENGTH.get) if self.traces else None
+        if not self.traces or any(tag is TraceLevel.ABSTRACTION_PATH for tag in self.traces):
+            return None
+        return min(self.traces, key=_STRENGTH.get)
+
+    @property
+    def trace_floor_status(self) -> str:
+        if not self.traces:
+            return "EMPTY"
+        if any(tag is TraceLevel.ABSTRACTION_PATH for tag in self.traces):
+            return "OFF_BRANCH_UNKNOWN"
+        return "L1_DECLARED_FLOOR"
 
     @property
     def endpoint(self) -> str:
@@ -266,6 +280,7 @@ class MapReport:
     role_changes: tuple[str, ...]
     level_changes: tuple[str, ...]
     trace_weakenings: tuple[str, ...]
+    trace_incomparabilities: tuple[str, ...] = ()
 
 
 def _map_dict(items: tuple, expected: set[str], label: str) -> dict:
@@ -289,7 +304,7 @@ def map_report(source: Presentation, target: Presentation, mapping: StructureMap
     inverses = {image: tuple(sorted(name for name, value in nodes.items() if value == image))
                 for image in set(nodes.values())}
     collisions = tuple(sorted((image, names) for image, names in inverses.items() if len(names) > 1))
-    contracted, expanded, roles, weakened = [], [], [], []
+    contracted, expanded, roles, weakened, incomparable = [], [], [], [], []
     for arc in source.arcs:
         witness = realize(target, Path(nodes[arc.source], arcs[arc.name]))
         if witness.endpoint != nodes[arc.target]:
@@ -300,14 +315,16 @@ def map_report(source: Presentation, target: Presentation, mapping: StructureMap
             expanded.append(arc.name)
         if witness.roles != (arc.role,):
             roles.append(arc.name)
-        if witness.trace_floor is None or _STRENGTH[witness.trace_floor] < _STRENGTH[arc.trace]:
+        if arc.trace is TraceLevel.ABSTRACTION_PATH or witness.trace_floor_status == "OFF_BRANCH_UNKNOWN":
+            incomparable.append(arc.name)
+        elif witness.trace_floor is None or _STRENGTH[witness.trace_floor] < _STRENGTH[arc.trace]:
             weakened.append(arc.name)
     level_changes = tuple(sorted(n.name for n in source.nodes if n.level != target_nodes[nodes[n.name]].level))
     one_for_one = all(len(image) == 1 for image in arcs.values())
     distinct_arc_images = len({image for image in arcs.values()}) == len(arcs)
     return MapReport(not collisions and one_for_one and distinct_arc_images, collisions,
                      tuple(sorted(contracted)), tuple(sorted(expanded)), tuple(sorted(roles)),
-                     level_changes, tuple(sorted(weakened)))
+                     level_changes, tuple(sorted(weakened)), tuple(sorted(incomparable)))
 
 
 @dataclass(frozen=True)
@@ -410,6 +427,12 @@ def compare_development(before: Presentation, after: Presentation, obligations: 
 def _plain(value):
     if isinstance(value, Enum):
         return value.value
+    if is_dataclass(value) and not isinstance(value, type):
+        result = {field.name: _plain(getattr(value, field.name)) for field in fields(value)}
+        if isinstance(value, Witness):
+            result["trace_floor"] = _plain(value.trace_floor)
+            result["trace_floor_status"] = value.trace_floor_status
+        return result
     if isinstance(value, dict):
         return {key: _plain(item) for key, item in value.items()}
     if isinstance(value, (tuple, list)):
@@ -419,7 +442,9 @@ def _plain(value):
 
 def json_data(value):
     """JSON-compatible data without dropping ordered paths or evidence status."""
-    return _plain(asdict(value))
+    if not is_dataclass(value) or isinstance(value, type):
+        raise TypeError("json_data requires a dataclass instance")
+    return _plain(value)
 
 
 def _presentation_data(presentation: Presentation) -> dict:

@@ -13,10 +13,19 @@ from coherence import (Arc, CoherenceStatus, Criterion, Node, Obligation, Path,
                        map_report, stabilize, transport, verify_stabilization)
 
 
+def _unique_members(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
 def load_case(path: FilePath):
     if path.stat().st_size > 1_048_576:
         raise ValueError("case file exceeds the one-mebibyte input limit")
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=_unique_members)
     if not isinstance(data, dict) or set(data) != {"presentation", "obligations"}:
         raise ValueError("case requires exactly presentation and obligations")
     p = data["presentation"]

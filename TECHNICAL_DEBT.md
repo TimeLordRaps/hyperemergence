@@ -19,6 +19,9 @@
 | HE-015 | An expanded path image is not one-for-one retention, but might be recoverable through an additional decoder. | OPEN | First expanded-encoding consumer: define decoder and prove recovery; do not equate the loss flag with universal irrecoverability. |
 | HE-016 | Finite continuation enumeration cannot establish unbounded capacity; budget limits can truncate evidence. | OPEN | Before unbounded relation claims, derive an extension invariant. Current independent enumeration oracle and truncation controls preserve the bounded contract. |
 | HE-017 | Stabilization handoff hashes bind content and mechanism, not signer authority or native Hyperform closure. | OPEN | Before native stabilization/authorization claims, supply formation and authority evidence; test valid and invalid witnesses. |
+| HE-018 | The finite tag contract rejected `~=` and the field description omitted Hypermath's documented architectural abstraction off-branch. | VERIFIED_RESOLVED within the finite contract | Exact annotated path and CLI round-trip now retain four distinct spellings, preserve an unknown off-branch floor, and never infer L1 rank or native retrace. |
+| HE-019 | The public quadrilateral note documents conditional retrace; native adequacy and operational reproduction are not established by a tag or supplied semantic conclusion. | OPEN | First native branch adapter: check an actual derivation-path relation and independently reconstruct its required adequacy evidence before any `==` promotion. |
+| HE-020 | Duplicate JSON `trace` members originally let `=~` silently overwrite `~=` while the CLI reported a coherent record. | VERIFIED_RESOLVED within the finite input contract | Exact ambiguous-input RED case now exits 2 with a duplicate-member error, before any verdict. Valid four-tag cases remain supported. |
 
 Checkpoint 1 on 2026-09-30 inspected the refuted-or-unknown reading, which is
 the hotspot: no declaration may produce a confirming verdict, and both
@@ -30,16 +33,28 @@ The tests check two refutations and three refusals:
 - refusals: a confirming verdict, a closure flag on a candidate, and numeric
   levels.
 
-The rotating neglected area is source drift (HE-010: the definition has a
-long and a short form in the same repository). PowerShell
-`Get-Random -Minimum 3 -Maximum 8` drew **6**, so the next rotating audit is
-due at coherent change-and-check checkpoint **7**. No seed was supplied, so do
-not redraw to postpone the audit.
+The first rotating neglected area was source drift (HE-010: the definition
+has a long and a short form). The initial tool draw was 6, making checkpoint
+7 the original due gate. Integration subsequently performed that due audit
+on correspondence, endpoint/path distinctions and handoff compatibility.
+The new observed interval was 7; integrated checkpoint 10 retained next due
+checkpoint 17. This supersedes the old due-7 schedule; do not redraw to
+postpone the current due gate.
 
 2026-10-03 development checkpoints 2-6: mechanism baseline/first integration,
 exact renaming refutation and repair, observation-level coherence, rewritten
 theory/contracts/package, final local suite and package verification. The
-existing interval is preserved: next rotating audit is still due at
-checkpoint 7. Hotspot inspected: identifier/context drift and endpoint-to-path
-overclaim. Adjacent guard: one-level witnesses cannot pass by declaring an
-unused level, and partial obligations cannot be handed off as complete.
+integration record supersedes the worker's original next-due state.
+Hotspot inspected: identifier/context drift and endpoint-to-path overclaim.
+Adjacent guard: one-level witnesses cannot pass by declaring an unused level,
+and partial obligations cannot be handed off as complete.
+
+Filtration correction checkpoints 11-14: exact missing-`~=` round-trip RED,
+tag-envelope/off-branch comparison repair and full-suite GREEN; corrected
+lineage/contracts and exact-source package verification; then exact
+duplicate-trace overwrite RED, strict input repair and final rebuilt package
+with full-suite validation. The current
+next rotating audit remains checkpoint 17. This correction inspected the
+source-drift hotspot: the public native L2 file and the separate public
+architectural note have different coverage and cannot be cited as one
+implementation. Native branch adequacy remains HE-019, OPEN.

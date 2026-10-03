@@ -44,6 +44,7 @@ Python 3.12 or later; the runtime uses only the standard library.
 python -B -m hyperemergence demo
 python -B -m hyperemergence check examples/coherent.json
 python -B -m hyperemergence check examples/partial.json
+python -B -m hyperemergence check examples/abstraction-path.json
 python -B -m hyperemergence walks examples/coherent.json seed --depth 2
 python -B -u validate.py
 ```
@@ -78,10 +79,21 @@ laws, worked counterexamples, stabilization boundary and research program.
 contract. [PROVENANCE.md](PROVENANCE.md) separates sourced senses,
 user-stated questions and proposed constructions.
 
-Hypermath distinguishes continuation overlap (`~~`), matching outcomes
-with paths discarded (`=~`), and mutual path reproduction (`==`). The finite
-laboratory keeps those distinctions visible without identifying its Python
-records with native Hypermath Forms. Cross-level coherence also does not
+Hypermath's L1 concrete relation chain distinguishes continuation overlap
+(`~~`), matching outcomes with paths discarded (`=~`), and mutual path
+reproduction (`==`). Its documented
+[quadrilateral architecture](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md)
+also includes an abstraction off-branch (`~=`) and conditional retrace.
+`~=` and `=~` are separate spellings and meanings. The laboratory retains
+all four tags without adding `~=` as a linear L1 grade. The abstraction case
+round-trips the complete annotated path; its L1 floor remains
+`OFF_BRANCH_UNKNOWN`, and native relations remain unestablished.
+
+Endpoint, observation and full-path checks form **Hyperemergence's own
+observation-strength chain**. They do not replace the foundation's whole
+filtration. Retaining a tag or matching a landing does not prove conditional
+retrace. No Python record is identified with a native Form or DerivationPath.
+Cross-level coherence also does not
 establish Hyperorder's convergence of divergences or Hyperchaos's convergence
 toward divergence; those fields own their respective mechanisms.
 
