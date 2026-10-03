@@ -1,0 +1,32 @@
+{
+  "presentation": {
+    "name": "two cross-level explanations",
+    "levels": ["base", "meta", "whole"],
+    "nodes": [
+      {"name": "seed", "level": "base"},
+      {"name": "left", "level": "meta"},
+      {"name": "right", "level": "meta"},
+      {"name": "joined", "level": "whole"}
+    ],
+    "arcs": [
+      {"name": "a", "source": "seed", "target": "left", "role": "open-left"},
+      {"name": "b", "source": "left", "target": "joined", "role": "join-left"},
+      {"name": "c", "source": "seed", "target": "right", "role": "open-right"},
+      {"name": "d", "source": "right", "target": "joined", "role": "join-right"}
+    ]
+  },
+  "obligations": [
+    {
+      "name": "joined outcome",
+      "left": {"start": "seed", "arcs": ["a", "b"]},
+      "right": {"start": "seed", "arcs": ["c", "d"]},
+      "criterion": "endpoint"
+    },
+    {
+      "name": "reproduced explanation",
+      "left": {"start": "seed", "arcs": ["a", "b"]},
+      "right": {"start": "seed", "arcs": ["c", "d"]},
+      "criterion": "path"
+    }
+  ]
+}

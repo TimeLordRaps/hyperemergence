@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperemergence"
+version = "0.2.1"
+description = "Witnessed finite cross-level coherence and development laboratory"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+authors = [{name = "Tyler Roost / The TimeLord"}]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/TimeLordRaps/hyperemergence"
+
+[project.scripts]
+hyperemergence = "coherence_cli:main"
+
+[tool.setuptools]
+py-modules = ["hyperemergence", "coherence", "coherence_cli"]

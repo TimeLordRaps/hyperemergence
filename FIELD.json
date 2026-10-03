@@ -1,0 +1,48 @@
+{
+  "field_id": "hyperemergence",
+  "contract_version": "0.2.1",
+  "classification": "FRAME",
+  "module": "hyperemergence",
+  "exports": [
+    "Sense", "SENSES", "resolve_sense", "Statement", "FIELDS_ASKED",
+    "FROM_HYPERPHYSICS", "NOVELTIES", "STATEMENTS", "Target", "Stabilization",
+    "Candidate", "Verdict", "Reading", "assess", "Node", "Arc", "Presentation",
+    "TraceLevel", "Path", "Witness", "MissingEvidence", "realize", "compose",
+    "Criterion", "Obligation", "CheckStatus", "CoherenceStatus", "check",
+    "StructureMap", "MapReport", "Transport", "map_report", "transport", "relabel",
+    "continuation_profile", "Development", "compare_development", "Handoff",
+    "presentation_digest", "stabilize", "verify_stabilization"
+  ],
+  "scope": "Study witnessed finite coherence across declared recursive levels: route composition, endpoint/observation/path obligations, obstructions, structure-map transport, baseline-relative witness development, bounded continuations and mutation-sensitive named stabilization handoffs. Preserve the sourced pre-stabilization hyperemergent sense and the original declaration checker.",
+  "commands": [
+    "python -B -m hyperemergence demo",
+    "python -B -m hyperemergence check examples/coherent.json",
+    "python -B -m hyperemergence check examples/abstraction-path.json",
+    "python -B -m hyperemergence walks examples/coherent.json seed --depth 2",
+    "python -B -u validate.py"
+  ],
+  "sources": [
+    {"repository": "TimeLordRaps/hyperstratum", "revision": "c4ffe2c7ff42c747d74ef5236d3bef631dd5f08e", "role": "sourced hyperemergent definition and hyperstack"},
+    {"repository": "TimeLordRaps/hypermath", "revision": "dc89cbb4f154844ca4909d7c1c359ee3882323e2", "role": "relation/path distinctions and native adequacy boundary"},
+    {"repository": "TimeLordRaps/hypermath", "revision": "dc89cbb4f154844ca4909d7c1c359ee3882323e2", "path": "docs/research/QUADRILATERAL_FILTRATION.md", "blob": "da31ed9f5ab60cbec1043236f7324910767198d9", "role": "documented architectural abstraction off-branch and conditional retrace; no native adequacy asserted"}
+  ],
+  "trace_tag_contract": {
+    "retained_spellings": ["~~", "=~", "~=", "=="],
+    "ranked_l1_declarations": ["~~", "=~", "=="],
+    "abstraction": "~= is retained as a caller path-abstraction annotation, not an L1 Form or step grade",
+    "off_branch_floor_status": "OFF_BRANCH_UNKNOWN",
+    "observation_chain": "Hyperemergence's own endpoint < observation < full-path checking strength, not the whole foundation filtration"
+  },
+  "exclusions": [
+    "Finite COHERENT means only that the explicitly listed obligations have reconstructed cross-level witnesses.",
+    "Native hyperemergence, formation, true newness and Hyperform closure remain UNKNOWN or OPEN.",
+    "Trace tags are declarations; they do not prove native Hypermath relations.",
+    "~= is not normalized to =~ or ranked between L1 tags. Retention and matching endpoints do not discharge conditional retrace or promote a native == relation.",
+    "Development reports acquired/lost witnesses only in a fixed typed context; unaligned renaming or changed shared meanings yields UNKNOWN_CONTEXT.",
+    "Finite continuation horizons do not establish unbounded continuation capacity.",
+    "Stabilization digests establish bounded content integrity, not signer authority or native closure.",
+    "No physical, chemical, cosmological, consciousness or ethical claim is established.",
+    "No automatic Hyperorder or Hyperchaos classification is made."
+  ],
+  "verifier_status": "NOT_CHECKED"
+}

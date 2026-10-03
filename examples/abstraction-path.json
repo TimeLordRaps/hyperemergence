@@ -1,0 +1,23 @@
+{
+  "presentation": {
+    "name": "retained abstraction-path annotations",
+    "levels": ["base", "meta", "whole"],
+    "nodes": [
+      {"name": "seed", "level": "base"},
+      {"name": "schema", "level": "meta"},
+      {"name": "claim", "level": "whole"}
+    ],
+    "arcs": [
+      {"name": "abstract", "source": "seed", "target": "schema", "role": "proposed-path-abstraction", "trace": "~="},
+      {"name": "compose", "source": "schema", "target": "claim", "role": "compose-abstract-record", "trace": "~="}
+    ]
+  },
+  "obligations": [
+    {
+      "name": "retain full annotation record",
+      "left": {"start": "seed", "arcs": ["abstract", "compose"]},
+      "right": {"start": "seed", "arcs": ["abstract", "compose"]},
+      "criterion": "path"
+    }
+  ]
+}
